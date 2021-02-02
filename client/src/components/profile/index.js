@@ -1,7 +1,6 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component, } from "react";
 import { connect } from "react-redux";
 import { Layout, Avatar, Row, Col } from "antd";
-import { Bar } from "@ant-design/charts";
 import { Skillbar,Languagebar } from "../index.js";
 class Profile extends Component {
   constructor(props) {

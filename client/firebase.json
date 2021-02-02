@@ -1,0 +1,19 @@
+{
+  "hosting": [
+  {
+    "site": "reactnode-8c1eb",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+]
+}

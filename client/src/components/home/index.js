@@ -5,15 +5,13 @@ import { Profile } from "../index.js";
 // import auth from "../firebase/auth";
 // import { db } from "../firebase/db/index";
 import {
-  AppstoreOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  PieChartOutlined,
-  DesktopOutlined,
-  ContainerOutlined,
-  MailOutlined,
+  ShopOutlined ,
+  LoginOutlined,
+  LogoutOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
-import config from "../firebase/config";
 import "firebase/auth";
 import firebase from "firebase/app";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
@@ -99,7 +97,7 @@ class Home extends Component {
               style={{ marginBottom: 16 }}
             >
               {React.createElement(
-                this.state.collapsed ? MenuFoldOutlined : MenuUnfoldOutlined
+                this.state.collapsed ? MenuUnfoldOutlined  : MenuFoldOutlined 
               )}
             </Button>
             <Menu
@@ -108,22 +106,22 @@ class Home extends Component {
               theme="dark"
               inlineCollapsed={this.state.collapsed}
             >
-              <Menu.Item key="1" style={showmenu} icon={<PieChartOutlined />}>
+              <Menu.Item key="1" style={showmenu} icon={<UserOutlined  />}>
                 Option 1
               </Menu.Item>
-              <Menu.Item key="2" style={showmenu} icon={<DesktopOutlined />}>
+              <Menu.Item key="2" style={showmenu} icon={<ShopOutlined  />}>
                 Option 2
               </Menu.Item>
-              <Menu.Item key="" style={showmenu} icon={<ContainerOutlined />}>
+              {/* <Menu.Item key="" style={showmenu} icon={<ContainerOutlined />}>
                 Option 3
-              </Menu.Item>
+              </Menu.Item> */}
               
               {this.state.isSignedIn ? (
-                <Menu.Item key="4" style={showmenu} onClick={logout} icon={<ContainerOutlined />}>
+                <Menu.Item key="4" style={showmenu} onClick={logout} icon={<LogoutOutlined />}>
                 Logout
               </Menu.Item>
               ) : (
-                <Menu.Item key="4" style={showmenu} onClick={(e) => this.setState({ visiblelogin: true,login:1 })} icon={<ContainerOutlined />}>
+                <Menu.Item key="4" style={showmenu} onClick={(e) => this.setState({ visiblelogin: true,login:1 })} icon={<LoginOutlined />}>
                 Login
               </Menu.Item>
               )}
@@ -141,7 +139,7 @@ class Home extends Component {
             <Profile></Profile>
           </Content>
           <Footer style={{ textAlign: "center" }}>
-            Ant Design ©2018 Created by Ant UED
+            Created by React.js/Ant Design/Node.js/Firebase
           </Footer>
         </Layout>
       </div>
